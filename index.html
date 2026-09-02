@@ -1,1989 +1,1084 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+<title>Muspha Construction & Services Limited</title>
 
-  <meta name="description"
-        content="Muspha Construction & Services Limited — professional construction, architecture and building solutions.">
+<meta name="description" content="Muspha Construction & Services Limited - Building trust, creating value. Construction, architectural and professional services in Maiduguri, Borno State.">
 
-  <meta name="theme-color" content="#111111">
+<style>
 
-  <title>Muspha Construction & Services Limited</title>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-  <style>
-    /* =========================================================
-       MUSPHA CONSTRUCTION & SERVICES LIMITED
-       Main Website Styles
-       ========================================================= */
+html {
+    scroll-behavior: smooth;
+}
 
-    :root {
-      --black: #0d0d0d;
-      --dark: #111111;
-      --dark-2: #181818;
-      --white: #ffffff;
-      --light: #f5f5f3;
-      --gray: #bdbdbd;
-      --gold: #c9a33a;
-      --gold-light: #e4c866;
-      --border: rgba(255,255,255,0.12);
-      --max-width: 1250px;
-    }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: #ffffff;
+    line-height: 1.6;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/* GOLD STRIPE */
 
-    html {
-      scroll-behavior: smooth;
-    }
+.gold-stripe {
+    height: 5px;
+    width: 100%;
+    background: #c49a45;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--white);
-      color: var(--black);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+/* HEADER */
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+header {
+    background: #080808;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 85px;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-    button {
-      font-family: inherit;
-    }
+/* LOGO */
 
-    .container {
-      width: min(92%, var(--max-width));
-      margin: auto;
-    }
+.logo {
+    display: flex;
+    align-items: center;
+}
 
-    /* =========================================================
-       GOLD DIAGONAL BRAND STRIPES
-       ========================================================= */
+.logo img {
+    width: 190px;
+    max-height: 70px;
+    object-fit: contain;
+    display: block;
+}
 
-    .gold-stripes {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      overflow: hidden;
-      opacity: 0.14;
-    }
+/* NAVIGATION */
 
-    .gold-stripes::before {
-      content: "";
-      position: absolute;
-      width: 150%;
-      height: 150%;
-      top: -20%;
-      left: 10%;
-      background:
-        repeating-linear-gradient(
-          135deg,
-          transparent 0,
-          transparent 105px,
-          var(--gold) 106px,
-          var(--gold) 112px,
-          transparent 113px,
-          transparent 210px
-        );
-      transform: rotate(0deg);
-    }
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
 
-    /* =========================================================
-       HEADER
-       ========================================================= */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+}
 
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid #e9e9e9;
-    }
+.nav-links a:hover {
+    color: #c49a45;
+}
 
-    .nav {
-      min-height: 90px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
+/* HAMBURGER */
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
+.menu-btn {
+    display: none;
+    background: transparent;
+    border: 1px solid #c49a45;
+    color: #c49a45;
+    font-size: 28px;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    background:
+        linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.88)),
+        radial-gradient(circle at center, #2a2418 0%, #080808 65%);
+    position: relative;
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 5px;
+    background: #c49a45;
+}
+
+.hero::before {
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero::after {
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero h1 span {
+    color: #c49a45;
+}
+
+.hero p {
+    font-size: 21px;
+    color: #ddd;
+    margin-bottom: 35px;
+}
+
+.tagline {
+    color: #c49a45;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    margin: 6px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-gold {
+    background: #c49a45;
+    color: #080808;
+}
+
+.btn-gold:hover {
+    background: #e0b75e;
+}
+
+.btn-outline {
+    border: 1px solid #c49a45;
+    color: #c49a45;
+}
+
+.btn-outline:hover {
+    background: #c49a45;
+    color: #080808;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.section-title h2 span {
+    color: #c49a45;
+}
+
+.section-title .line {
+    width: 70px;
+    height: 4px;
+    background: #c49a45;
+    margin: auto;
+}
+
+/* ABOUT */
+
+.about {
+    background: #111111;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.about-box {
+    border: 1px solid #333;
+    padding: 30px;
+    border-left: 5px solid #c49a45;
+    background: #0b0b0b;
+}
+
+.about-box h3 {
+    color: #c49a45;
+    margin-bottom: 15px;
+}
+
+.about-box p {
+    color: #ccc;
+}
+
+/* SERVICES */
+
+.services {
+    background: #080808;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: #121212;
+    border: 1px solid #292929;
+    padding: 35px 25px;
+    text-align: center;
+    transition: 0.3s;
+    border-top: 4px solid #c49a45;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    border-color: #c49a45;
+}
+
+.service-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #c49a45;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #bbb;
+    font-size: 15px;
+}
+
+/* PROJECTS */
+
+.projects {
+    background: #111111;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: #080808;
+    border: 1px solid #2b2b2b;
+    overflow: hidden;
+}
+
+.project-image {
+    height: 230px;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    color: #c49a45;
+    margin-bottom: 7px;
+}
+
+.project-info p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #080808;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-box {
+    background: #121212;
+    border: 1px solid #292929;
+    padding: 35px;
+}
+
+.contact-box h3 {
+    color: #c49a45;
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+}
+
+.contact-item strong {
+    display: block;
+    color: #c49a45;
+    margin-bottom: 4px;
+}
+
+.contact-item span,
+.contact-item a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #c49a45;
+}
+
+.whatsapp {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 14px 25px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    background: #050505;
+    border-top: 1px solid #292929;
+    padding: 45px 20px 25px;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 180px;
+    max-height: 70px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+footer p {
+    color: #999;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+footer .gold {
+    color: #c49a45;
+}
+
+/* BACK TO TOP */
+
+.top-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 45px;
+    height: 45px;
+    background: #c49a45;
+    color: #080808;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 999;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        padding: 10px 15px;
+        min-height: 75px;
     }
 
     .logo img {
-      width: 185px;
-      height: auto;
-      object-fit: contain;
+        width: 155px;
+        max-height: 60px;
     }
 
-    /* Desktop navigation */
-
-    .desktop-nav {
-      display: flex;
-      align-items: center;
-      gap: 34px;
+    .menu-btn {
+        display: block;
     }
 
-    .desktop-nav a {
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      position: relative;
-      padding: 10px 0;
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #080808;
+        flex-direction: column;
+        gap: 0;
+        border-top: 1px solid #292929;
     }
 
-    .desktop-nav a::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 3px;
-      background: var(--gold);
-      transition: 0.3s ease;
+    .nav-links.active {
+        display: flex;
     }
 
-    .desktop-nav a:hover::after {
-      width: 100%;
+    .nav-links li {
+        border-bottom: 1px solid #222;
     }
 
-    .nav-cta {
-      background: var(--black);
-      color: white !important;
-      padding: 13px 19px !important;
+    .nav-links a {
+        display: block;
+        padding: 18px 25px;
     }
-
-    .nav-cta::after {
-      display: none;
-    }
-
-    /* Mobile menu button */
-
-    .menu-button {
-      display: none;
-      width: 58px;
-      height: 58px;
-      border: none;
-      background: var(--black);
-      color: white;
-      cursor: pointer;
-      align-items: center;
-      justify-content: center;
-      font-size: 29px;
-      line-height: 1;
-    }
-
-    .menu-button span {
-      display: block;
-      transition: 0.3s ease;
-    }
-
-    /* Mobile menu */
-
-    .mobile-menu {
-      display: none;
-      background: var(--black);
-      color: white;
-      padding: 25px 6%;
-      border-top: 3px solid var(--gold);
-    }
-
-    .mobile-menu.active {
-      display: block;
-    }
-
-    .mobile-menu a {
-      display: block;
-      padding: 17px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.12);
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    .mobile-menu .mobile-gold {
-      color: var(--gold-light);
-    }
-
-    /* =========================================================
-       HERO
-       ========================================================= */
 
     .hero {
-      min-height: 100vh;
-      background: var(--black);
-      color: white;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      padding: 145px 0 100px;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      width: min(92%, var(--max-width));
-      margin: auto;
-    }
-
-    .eyebrow {
-      color: var(--gold-light);
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 7px;
-      text-transform: uppercase;
-      margin-bottom: 32px;
+        min-height: 550px;
+        padding: 70px 20px;
     }
 
     .hero h1 {
-      font-size: clamp(55px, 9vw, 125px);
-      line-height: 0.88;
-      letter-spacing: -5px;
-      text-transform: uppercase;
-      max-width: 950px;
-      font-weight: 900;
+        font-size: 38px;
     }
 
-    .hero h1 .gold {
-      color: var(--gold);
-    }
-
-    .hero-description {
-      max-width: 730px;
-      color: #d0d0d0;
-      font-size: clamp(18px, 2vw, 25px);
-      line-height: 1.6;
-      margin-top: 42px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 45px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 58px;
-      padding: 0 30px;
-      font-size: 14px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: 0.3s ease;
-      border: 1px solid transparent;
-    }
-
-    .btn-gold {
-      background: var(--gold-light);
-      color: var(--black);
-    }
-
-    .btn-gold:hover {
-      background: white;
-      transform: translateY(-3px);
-    }
-
-    .btn-outline {
-      border-color: rgba(255,255,255,0.45);
-      color: white;
-    }
-
-    .btn-outline:hover {
-      border-color: var(--gold);
-      color: var(--gold-light);
-    }
-
-    .hero-bottom {
-      margin-top: 80px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .line-long {
-      width: 135px;
-      height: 5px;
-      background: var(--gold);
-    }
-
-    .line-short {
-      width: 65px;
-      height: 5px;
-      background: var(--gold);
-      opacity: 0.65;
-    }
-
-    .line-tiny {
-      width: 28px;
-      height: 5px;
-      background: var(--gold);
-      opacity: 0.4;
-    }
-
-    /* =========================================================
-       GENERAL SECTIONS
-       ========================================================= */
-
-    section {
-      padding: 110px 0;
-    }
-
-    .section-label {
-      color: var(--gold);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    .section-title {
-      font-size: clamp(38px, 6vw, 75px);
-      line-height: 1;
-      letter-spacing: -3px;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-
-    .section-intro {
-      max-width: 700px;
-      color: #555;
-      font-size: 19px;
-      margin-top: 25px;
-    }
-
-    /* =========================================================
-       ABOUT
-       ========================================================= */
-
-    .about {
-      background: var(--light);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .about-text p {
-      color: #4f4f4f;
-      font-size: 18px;
-      line-height: 1.9;
-      margin-top: 25px;
-    }
-
-    .about-highlight {
-      margin-top: 35px;
-      padding: 28px;
-      border-left: 5px solid var(--gold);
-      background: white;
-    }
-
-    .about-highlight strong {
-      display: block;
-      font-size: 20px;
-      margin-bottom: 8px;
-    }
-
-    .about-visual {
-      min-height: 500px;
-      background: var(--black);
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: flex-end;
-      padding: 45px;
-      color: white;
-    }
-
-    .about-visual .gold-stripes {
-      opacity: 0.2;
-    }
-
-    .about-number {
-      position: relative;
-      z-index: 2;
-      font-size: clamp(90px, 13vw, 180px);
-      line-height: 0.8;
-      color: var(--gold);
-      font-weight: 900;
-    }
-
-    .about-caption {
-      position: absolute;
-      z-index: 2;
-      right: 35px;
-      top: 35px;
-      writing-mode: vertical-rl;
-      letter-spacing: 4px;
-      font-size: 12px;
-      color: #aaa;
-      text-transform: uppercase;
-    }
-
-    /* =========================================================
-       SERVICES
-       ========================================================= */
-
-    .services {
-      background: white;
-    }
-
-    .services-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 30px;
-      margin-bottom: 55px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .service-card {
-      background: var(--black);
-      color: white;
-      padding: 40px 32px;
-      min-height: 330px;
-      position: relative;
-      overflow: hidden;
-      transition: 0.3s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-    }
-
-    .service-card::after {
-      content: "";
-      position: absolute;
-      width: 120px;
-      height: 5px;
-      background: var(--gold);
-      right: -20px;
-      top: 30px;
-      transform: rotate(-45deg);
-    }
-
-    .service-number {
-      color: var(--gold);
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: 2px;
-    }
-
-    .service-card h3 {
-      margin-top: 55px;
-      font-size: 28px;
-      text-transform: uppercase;
-      line-height: 1.1;
-    }
-
-    .service-card p {
-      margin-top: 18px;
-      color: #aaa;
-      line-height: 1.7;
-    }
-
-    /* =========================================================
-       PROJECTS
-       ========================================================= */
-
-    .projects {
-      background: var(--black);
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .projects .section-title {
-      color: white;
-    }
-
-    .projects .section-intro {
-      color: #aaa;
-    }
-
-    .projects-grid {
-      position: relative;
-      z-index: 2;
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 18px;
-      margin-top: 55px;
-    }
-
-    .project-card {
-      min-height: 360px;
-      position: relative;
-      overflow: hidden;
-      background: #222;
-      display: flex;
-      align-items: flex-end;
-      padding: 30px;
-    }
-
-    .project-card:nth-child(1) {
-      grid-column: span 7;
-    }
-
-    .project-card:nth-child(2) {
-      grid-column: span 5;
-    }
-
-    .project-card:nth-child(3) {
-      grid-column: span 5;
-    }
-
-    .project-card:nth-child(4) {
-      grid-column: span 7;
-    }
-
-    .project-bg {
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-      transition: 0.6s ease;
-      filter: grayscale(30%);
-    }
-
-    .project-card:hover .project-bg {
-      transform: scale(1.07);
-    }
-
-    .project-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.9),
-        rgba(0,0,0,0.05)
-      );
-    }
-
-    .project-info {
-      position: relative;
-      z-index: 2;
-    }
-
-    .project-info span {
-      color: var(--gold-light);
-      font-size: 12px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .project-info h3 {
-      font-size: 28px;
-      margin-top: 8px;
-      text-transform: uppercase;
-    }
-
-    .projects-note {
-      margin-top: 25px;
-      color: #888;
-      font-size: 13px;
-    }
-
-    /* =========================================================
-       WHY MUSPHA
-       ========================================================= */
-
-    .why {
-      background: white;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-      margin-top: 55px;
-    }
-
-    .why-card {
-      border-top: 5px solid var(--gold);
-      background: var(--light);
-      padding: 30px 25px;
-    }
-
-    .why-card h3 {
-      font-size: 20px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    .why-card p {
-      color: #666;
-      font-size: 15px;
-    }
-
-    /* =========================================================
-       CONTACT
-       ========================================================= */
-
-    .contact {
-      background: var(--light);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      align-items: start;
-    }
-
-    .contact-info {
-      margin-top: 40px;
-    }
-
-    .contact-item {
-      padding: 22px 0;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .contact-item small {
-      display: block;
-      color: var(--gold);
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 5px;
-    }
-
-    .contact-item a,
-    .contact-item span {
-      font-size: 19px;
-      color: #222;
-    }
-
-    .contact-card {
-      background: var(--black);
-      color: white;
-      padding: 50px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .contact-card h3 {
-      font-size: 42px;
-      line-height: 1;
-      text-transform: uppercase;
-      position: relative;
-      z-index: 2;
-    }
-
-    .contact-card p {
-      position: relative;
-      z-index: 2;
-      color: #aaa;
-      margin-top: 20px;
-    }
-
-    .contact-card .btn {
-      position: relative;
-      z-index: 2;
-      margin-top: 30px;
-    }
-
-    .rc-number {
-      position: relative;
-      z-index: 2;
-      margin-top: 35px;
-      color: var(--gold-light);
-      font-size: 13px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    /* =========================================================
-       FOOTER
-       ========================================================= */
-
-    footer {
-      background: #080808;
-      color: white;
-      padding: 55px 0 25px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 1fr 1fr;
-      gap: 50px;
-      padding-bottom: 45px;
-    }
-
-    .footer-logo img {
-      width: 200px;
-      filter: brightness(0) invert(1);
-      opacity: 0.95;
-    }
-
-    .footer-description {
-      color: #888;
-      max-width: 420px;
-      margin-top: 20px;
-    }
-
-    footer h4 {
-      color: var(--gold-light);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 18px;
-      font-size: 13px;
-    }
-
-    footer ul {
-      list-style: none;
-    }
-
-    footer li {
-      margin: 10px 0;
-      color: #aaa;
-    }
-
-    footer a:hover {
-      color: var(--gold-light);
-    }
-
-    .footer-bottom {
-      border-top: 1px solid #222;
-      padding-top: 22px;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      color: #777;
-      font-size: 12px;
-    }
-
-    /* =========================================================
-       FLOATING WHATSAPP
-       ========================================================= */
-
-    .whatsapp {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      z-index: 2000;
-      background: #25D366;
-      color: white;
-      width: 62px;
-      height: 62px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      font-weight: bold;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-      transition: 0.3s ease;
-    }
-
-    .whatsapp:hover {
-      transform: scale(1.1);
-    }
-
-    /* =========================================================
-       BACK TO TOP
-       ========================================================= */
-
-    .back-top {
-      position: fixed;
-      right: 22px;
-      bottom: 100px;
-      z-index: 1500;
-      width: 45px;
-      height: 45px;
-      border: 1px solid var(--gold);
-      background: var(--black);
-      color: var(--gold-light);
-      cursor: pointer;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-    }
-
-    .back-top.show {
-      display: flex;
-    }
-
-    /* =========================================================
-       RESPONSIVE
-       ========================================================= */
-
-    @media (max-width: 900px) {
-
-      .desktop-nav {
-        display: none;
-      }
-
-      .menu-button {
-        display: flex;
-      }
-
-      .logo img {
-        width: 175px;
-      }
-
-      .hero {
-        padding-top: 135px;
-      }
-
-      .hero h1 {
-        font-size: clamp(52px, 14vw, 100px);
-        letter-spacing: -3px;
-      }
-
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .why-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .about-visual {
-        min-height: 400px;
-      }
-    }
-
-    @media (max-width: 650px) {
-
-      section {
-        padding: 80px 0;
-      }
-
-      .nav {
-        min-height: 82px;
-      }
-
-      .logo img {
-        width: 155px;
-      }
-
-      .menu-button {
-        width: 55px;
-        height: 55px;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 130px 0 75px;
-      }
-
-      .eyebrow {
-        font-size: 11px;
-        letter-spacing: 4px;
-        line-height: 1.8;
-      }
-
-      .hero h1 {
-        font-size: clamp(48px, 15vw, 80px);
-        line-height: 0.92;
-      }
-
-      .hero-description {
+    .hero p {
         font-size: 17px;
-        line-height: 1.65;
-        margin-top: 30px;
-      }
-
-      .hero-actions {
-        margin-top: 30px;
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .hero-bottom {
-        margin-top: 45px;
-      }
-
-      .section-title {
-        letter-spacing: -2px;
-      }
-
-      .services-header {
-        display: block;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-card {
-        min-height: 290px;
-      }
-
-      .projects-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-      }
-
-      .project-card,
-      .project-card:nth-child(1),
-      .project-card:nth-child(2),
-      .project-card:nth-child(3),
-      .project-card:nth-child(4) {
-        grid-column: span 1;
-        min-height: 320px;
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-card {
-        padding: 35px 25px;
-      }
-
-      .contact-card h3 {
-        font-size: 35px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-      }
-
-      .whatsapp {
-        width: 57px;
-        height: 57px;
-        right: 18px;
-        bottom: 18px;
-      }
-
-      .back-top {
-        right: 18px;
-        bottom: 85px;
-      }
     }
-  </style>
+
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- =======================================================
-       HEADER
-       ======================================================= -->
+<div class="gold-stripe"></div>
 
-  <header>
+<header>
 
-    <div class="container nav">
+    <nav class="navbar">
 
-      <a href="#home" class="logo" aria-label="Muspha Home">
-
-        <!-- YOUR UPLOADED MUSPHA LOGO -->
-        <img
-          src="FC183645-30C3-4F46-B735-56DA4FAF0CBD.png"
-          alt="Muspha Construction and Services Limited Logo"
-        >
-
-      </a>
-
-      <!-- DESKTOP NAVIGATION -->
-
-      <nav class="desktop-nav">
-
-        <a href="#about">About</a>
-
-        <a href="#services">Services</a>
-
-        <a href="#projects">Projects</a>
-
-        <a href="#contact">Contact</a>
-
-        <a href="#contact" class="nav-cta">
-          Start a Project
+        <a href="#home" class="logo">
+            <img
+                src="./FC183645-30C3-4F46-B73E-56DA4FAF0CBD.png"
+                alt="Muspha Construction and Services Limited Logo"
+            >
         </a>
 
-      </nav>
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
 
-      <!-- MOBILE MENU BUTTON -->
-
-      <button
-        class="menu-button"
-        id="menuButton"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-      >
-        <span id="menuIcon">☰</span>
-      </button>
-
-    </div>
-
-    <!-- MOBILE NAVIGATION -->
-
-    <nav class="mobile-menu" id="mobileMenu">
-
-      <a href="#about">About</a>
-
-      <a href="#services">Services</a>
-
-      <a href="#projects">Projects</a>
-
-      <a href="#contact">Contact</a>
-
-      <a href="#contact" class="mobile-gold">
-        Start a Project →
-      </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About</a></li>
+            <li><a href="#services" onclick="closeMenu()">Services</a></li>
+            <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul>
 
     </nav>
 
-  </header>
+</header>
 
 
-  <!-- =======================================================
-       HERO
-       ======================================================= -->
+<!-- HOME -->
 
-  <main>
+<section class="hero" id="home">
 
-    <section class="hero" id="home">
+    <div class="hero-content">
 
-      <div class="gold-stripes"></div>
-
-      <div class="hero-content">
-
-        <div class="eyebrow">
-          Construction • Architecture • Services
+        <div class="tagline">
+            Building Trust • Creating Value
         </div>
 
         <h1>
-          Building<br>
-          Trust.<br>
-          Creating<br>
-          <span class="gold">Value.</span>
+            Muspha <span>Construction</span>
         </h1>
 
-        <p class="hero-description">
-          Muspha Construction &amp; Services Limited delivers
-          professional construction, architectural and building
-          solutions with a commitment to quality, reliability
-          and lasting value.
+        <p>
+            Professional construction, architectural and
+            technical services built around quality,
+            reliability and lasting value.
         </p>
 
-        <div class="hero-actions">
+        <a href="#services" class="btn btn-gold">
+            Our Services
+        </a>
 
-          <a href="#contact" class="btn btn-gold">
-            Start a Project →
-          </a>
+        <a href="#contact" class="btn btn-outline">
+            Contact Us
+        </a>
 
-          <a href="#projects" class="btn btn-outline">
-            View Projects
-          </a>
+    </div>
 
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>About <span>Us</span></h2>
+            <div class="line"></div>
         </div>
 
-        <div class="hero-bottom">
-          <span class="line-long"></span>
-          <span class="line-short"></span>
-          <span class="line-tiny"></span>
-        </div>
+        <div class="about-grid">
 
-      </div>
+            <div class="about-text">
 
-    </section>
+                <h3>
+                    Building With Purpose
+                </h3>
 
+                <p>
+                    Muspha Construction & Services Limited
+                    is a professional construction and services
+                    company focused on delivering dependable,
+                    high-quality solutions.
+                </p>
 
-    <!-- =====================================================
-         ABOUT
-         ===================================================== -->
+                <p>
+                    We combine practical construction knowledge,
+                    professional design and strong project
+                    management to create spaces and structures
+                    that provide lasting value.
+                </p>
 
-    <section class="about" id="about">
+                <p>
+                    Our approach is simple:
+                    <strong>quality, integrity and commitment.</strong>
+                </p>
 
-      <div class="container about-grid">
-
-        <div class="about-text">
-
-          <div class="section-label">
-            01 — About Muspha
-          </div>
-
-          <h2 class="section-title">
-            Built with<br>
-            purpose.
-          </h2>
-
-          <p>
-            Muspha Construction &amp; Services Limited is focused
-            on delivering dependable construction, architectural
-            and building solutions for clients who value quality,
-            professionalism and lasting results.
-          </p>
-
-          <p>
-            From planning and design through construction and
-            project delivery, we approach every project with
-            attention to detail, practical solutions and a
-            commitment to creating real value.
-          </p>
-
-          <div class="about-highlight">
-
-            <strong>
-              Building Trust. Creating Value.
-            </strong>
-
-            <span>
-              Professional solutions. Quality execution.
-              Lasting results.
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <div class="about-visual">
-
-          <div class="gold-stripes"></div>
-
-          <div class="about-caption">
-            Construction • Architecture • Services
-          </div>
-
-          <div class="about-number">
-            M.
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         SERVICES
-         ===================================================== -->
-
-    <section class="services" id="services">
-
-      <div class="container">
-
-        <div class="services-header">
-
-          <div>
-
-            <div class="section-label">
-              02 — What We Do
             </div>
 
-            <h2 class="section-title">
-              Our Services
-            </h2>
+            <div class="about-box">
 
-          </div>
+                <h3>Our Commitment</h3>
 
-          <p class="section-intro">
-            Professional services designed to take projects
-            from concept to completion.
-          </p>
+                <p>
+                    We believe every project deserves careful
+                    planning, quality workmanship and professional
+                    attention from beginning to completion.
+                </p>
+
+                <br>
+
+                <p>
+                    <strong class="gold">
+                        Building Trust. Creating Value.
+                    </strong>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Our <span>Services</span></h2>
+
+            <div class="line"></div>
 
         </div>
 
 
         <div class="services-grid">
 
-          <article class="service-card">
 
-            <div class="service-number">
-              01
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🏗️
+                </div>
+
+                <h3>Building Construction</h3>
+
+                <p>
+                    Residential, commercial and other
+                    building construction services delivered
+                    with attention to quality and detail.
+                </p>
+
             </div>
 
-            <h3>
-              Building<br>
-              Construction
-            </h3>
 
-            <p>
-              Quality construction solutions for residential,
-              commercial and other building projects.
-            </p>
+            <div class="service-card">
 
-          </article>
+                <div class="service-icon">
+                    📐
+                </div>
 
+                <h3>Architectural Services</h3>
 
-          <article class="service-card">
+                <p>
+                    Professional architectural planning,
+                    design development and project
+                    documentation.
+                </p>
 
-            <div class="service-number">
-              02
             </div>
 
-            <h3>
-              Architecture<br>
-              &amp; Design
-            </h3>
 
-            <p>
-              Practical architectural concepts and building
-              design solutions developed around your needs.
-            </p>
+            <div class="service-card">
 
-          </article>
+                <div class="service-icon">
+                    🏢
+                </div>
 
+                <h3>Project Management</h3>
 
-          <article class="service-card">
+                <p>
+                    Project coordination, supervision and
+                    management focused on time, quality
+                    and cost control.
+                </p>
 
-            <div class="service-number">
-              03
             </div>
 
-            <h3>
-              Project<br>
-              Management
-            </h3>
 
-            <p>
-              Coordinated project delivery with attention to
-              quality, time, budget and execution.
-            </p>
+            <div class="service-card">
 
-          </article>
+                <div class="service-icon">
+                    🔨
+                </div>
 
+                <h3>Renovation & Remodeling</h3>
 
-          <article class="service-card">
+                <p>
+                    Renovation, refurbishment and remodeling
+                    solutions for existing residential and
+                    commercial spaces.
+                </p>
 
-            <div class="service-number">
-              04
             </div>
 
-            <h3>
-              Renovation<br>
-              &amp; Remodeling
-            </h3>
 
-            <p>
-              Transforming existing spaces through professional
-              renovation, refurbishment and improvement.
-            </p>
+            <div class="service-card">
 
-          </article>
+                <div class="service-icon">
+                    🧱
+                </div>
 
+                <h3>Civil Works</h3>
 
-          <article class="service-card">
+                <p>
+                    Professional civil construction and
+                    infrastructure-related works.
+                </p>
 
-            <div class="service-number">
-              05
             </div>
 
-            <h3>
-              Building<br>
-              Consultancy
-            </h3>
 
-            <p>
-              Construction and building guidance to help clients
-              make informed project decisions.
-            </p>
+            <div class="service-card">
 
-          </article>
+                <div class="service-icon">
+                    🤝
+                </div>
 
+                <h3>Consultancy</h3>
 
-          <article class="service-card">
+                <p>
+                    Construction and technical consultancy
+                    services to support informed project
+                    decisions.
+                </p>
 
-            <div class="service-number">
-              06
             </div>
 
-            <h3>
-              General<br>
-              Services
-            </h3>
-
-            <p>
-              Flexible professional support for building,
-              construction and related project requirements.
-            </p>
-
-          </article>
 
         </div>
 
-      </div>
+    </div>
 
-    </section>
+</section>
 
 
-    <!-- =====================================================
-         PROJECTS
-         ===================================================== -->
+<!-- PROJECTS -->
 
-    <section class="projects" id="projects">
+<section class="projects" id="projects">
 
-      <div class="gold-stripes"></div>
+    <div class="container">
 
-      <div class="container">
+        <div class="section-title">
 
-        <div class="section-label">
-          03 — Selected Work
+            <h2>Our <span>Projects</span></h2>
+
+            <div class="line"></div>
+
         </div>
-
-        <h2 class="section-title">
-          Projects
-        </h2>
-
-        <p class="section-intro">
-          A growing portfolio of construction, architectural
-          and building projects.
-        </p>
 
 
         <div class="projects-grid">
 
-          <!-- PROJECT 01 -->
 
-          <article class="project-card">
+            <div class="project-card">
 
-            <div
-              class="project-bg"
-              style="
-                background-image:
-                url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85');
-              "
-            ></div>
+                <div
+                    class="project-image"
+                    style="background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80');">
+                </div>
 
-            <div class="project-overlay"></div>
+                <div class="project-info">
 
-            <div class="project-info">
+                    <h3>Building Construction</h3>
 
-              <span>
-                Residential
-              </span>
+                    <p>
+                        Modern construction and development
+                        projects.
+                    </p>
 
-              <h3>
-                Modern Residence
-              </h3>
+                </div>
 
             </div>
 
-          </article>
 
+            <div class="project-card">
 
-          <!-- PROJECT 02 -->
+                <div
+                    class="project-image"
+                    style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80');">
+                </div>
 
-          <article class="project-card">
+                <div class="project-info">
 
-            <div
-              class="project-bg"
-              style="
-                background-image:
-                url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=85');
-              "
-            ></div>
+                    <h3>Architectural Design</h3>
 
-            <div class="project-overlay"></div>
+                    <p>
+                        Contemporary architectural concepts
+                        and professional design solutions.
+                    </p>
 
-            <div class="project-info">
-
-              <span>
-                Architecture
-              </span>
-
-              <h3>
-                Contemporary Design
-              </h3>
-
-            </div>
-
-          </article>
-
-
-          <!-- PROJECT 03 -->
-
-          <article class="project-card">
-
-            <div
-              class="project-bg"
-              style="
-                background-image:
-                url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85');
-              "
-            ></div>
-
-            <div class="project-overlay"></div>
-
-            <div class="project-info">
-
-              <span>
-                Construction
-              </span>
-
-              <h3>
-                Building Works
-              </h3>
-
-            </div>
-
-          </article>
-
-
-          <!-- PROJECT 04 -->
-
-          <article class="project-card">
-
-            <div
-              class="project-bg"
-              style="
-                background-image:
-                url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1400&q=85');
-              "
-            ></div>
-
-            <div class="project-overlay"></div>
-
-            <div class="project-info">
-
-              <span>
-                Development
-              </span>
-
-              <h3>
-                Project Delivery
-              </h3>
-
-            </div>
-
-          </article>
-
-        </div>
-
-        <p class="projects-note">
-          Project images shown are presentation placeholders.
-          Replace them with your actual Muspha project photographs
-          as your portfolio grows.
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         WHY MUSPHA
-         ===================================================== -->
-
-    <section class="why">
-
-      <div class="container">
-
-        <div class="section-label">
-          04 — Why Muspha
-        </div>
-
-        <h2 class="section-title">
-          Built around<br>
-          your goals.
-        </h2>
-
-        <div class="why-grid">
-
-          <div class="why-card">
-
-            <h3>
-              Quality
-            </h3>
-
-            <p>
-              We focus on professional workmanship and
-              attention to detail.
-            </p>
-
-          </div>
-
-
-          <div class="why-card">
-
-            <h3>
-              Reliability
-            </h3>
-
-            <p>
-              Clear communication and dependable project
-              delivery are at the heart of our approach.
-            </p>
-
-          </div>
-
-
-          <div class="why-card">
-
-            <h3>
-              Value
-            </h3>
-
-            <p>
-              We seek practical solutions that create
-              long-term value for our clients.
-            </p>
-
-          </div>
-
-
-          <div class="why-card">
-
-            <h3>
-              Professional
-            </h3>
-
-            <p>
-              Every project receives a structured and
-              professional approach.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         CONTACT
-         ===================================================== -->
-
-    <section class="contact" id="contact">
-
-      <div class="container contact-grid">
-
-        <div>
-
-          <div class="section-label">
-            05 — Contact
-          </div>
-
-          <h2 class="section-title">
-            Start a<br>
-            Project.
-          </h2>
-
-          <p class="section-intro">
-            Tell us about your construction, architectural or
-            building requirements and let's discuss how we can
-            help.
-          </p>
-
-
-          <div class="contact-info">
-
-            <div class="contact-item">
-
-              <small>
-                Address
-              </small>
-
-              <span>
-                7, Waziri Road, Off Airport Road,
-                Maiduguri, Borno State
-              </span>
+                </div>
 
             </div>
 
 
-            <div class="contact-item">
+            <div class="project-card">
 
-              <small>
-                Phone
-              </small>
+                <div
+                    class="project-image"
+                    style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80');">
+                </div>
 
-              <a href="tel:+2348109999911">
-                08109999911
-              </a>
+                <div class="project-info">
 
-            </div>
+                    <h3>Construction Works</h3>
 
+                    <p>
+                        Quality workmanship and practical
+                        construction solutions.
+                    </p>
 
-            <div class="contact-item">
-
-              <small>
-                Phone / WhatsApp
-              </small>
-
-              <a href="tel:+2349160007548">
-                09160007548
-              </a>
+                </div>
 
             </div>
 
 
-            <div class="contact-item">
-
-              <small>
-                Company Registration
-              </small>
-
-              <span>
-                RC: 9737862
-              </span>
-
-            </div>
-
-          </div>
-
         </div>
-
-
-        <div class="contact-card">
-
-          <div class="gold-stripes"></div>
-
-          <h3>
-            Let's build<br>
-            something<br>
-            valuable.
-          </h3>
-
-          <p>
-            Contact Muspha Construction &amp; Services Limited
-            directly to discuss your next project.
-          </p>
-
-          <a
-            href="https://wa.me/2348109999911?text=Hello%20Muspha%20Construction%20%26%20Services%20Limited%2C%20I%20would%20like%20to%20discuss%20a%20project."
-            class="btn btn-gold"
-            target="_blank"
-            rel="noopener"
-          >
-            WhatsApp Us →
-          </a>
-
-          <div class="rc-number">
-            RC: 9737862
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- =======================================================
-       FOOTER
-       ======================================================= -->
-
-  <footer>
-
-    <div class="container">
-
-      <div class="footer-grid">
-
-        <div>
-
-          <a href="#home" class="footer-logo">
-
-            <img
-              src="FC183645-30C3-4F46-B735-56DA4FAF0CBD.png"
-              alt="Muspha Logo"
-            >
-
-          </a>
-
-          <p class="footer-description">
-            Muspha Construction &amp; Services Limited —
-            building trust and creating value through
-            professional construction and building solutions.
-          </p>
-
-        </div>
-
-
-        <div>
-
-          <h4>
-            Navigation
-          </h4>
-
-          <ul>
-
-            <li>
-              <a href="#about">
-                About
-              </a>
-            </li>
-
-            <li>
-              <a href="#services">
-                Services
-              </a>
-            </li>
-
-            <li>
-              <a href="#projects">
-                Projects
-              </a>
-            </li>
-
-            <li>
-              <a href="#contact">
-                Contact
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <div>
-
-          <h4>
-            Contact
-          </h4>
-
-          <ul>
-
-            <li>
-              7, Waziri Road,
-              Off Airport Road
-            </li>
-
-            <li>
-              Maiduguri, Borno State
-            </li>
-
-            <li>
-              <a href="tel:+2348109999911">
-                08109999911
-              </a>
-            </li>
-
-            <li>
-              <a href="tel:+2349160007548">
-                09160007548
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-
-      <div class="footer-bottom">
-
-        <span>
-          © <span id="year"></span>
-          Muspha Construction &amp; Services Limited.
-          All rights reserved.
-        </span>
-
-        <span>
-          RC: 9737862
-        </span>
-
-      </div>
 
     </div>
 
-  </footer>
+</section>
 
 
-  <!-- =======================================================
-       FLOATING WHATSAPP
-       ======================================================= -->
+<!-- CONTACT -->
 
-  <a
-    href="https://wa.me/2348109999911?text=Hello%20Muspha%20Construction%20%26%20Services%20Limited%2C%20I%20would%20like%20to%20make%20an%20enquiry."
-    class="whatsapp"
-    target="_blank"
-    rel="noopener"
-    aria-label="Chat with Muspha on WhatsApp"
-    title="Chat with us on WhatsApp"
-  >
-    ☎
-  </a>
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Contact <span>Us</span></h2>
+
+            <div class="line"></div>
+
+        </div>
 
 
-  <!-- =======================================================
-       BACK TO TOP
-       ======================================================= -->
+        <div class="contact-grid">
 
-  <button
-    class="back-top"
-    id="backTop"
-    aria-label="Back to top"
-  >
+
+            <div class="contact-box">
+
+                <h3>Get In Touch</h3>
+
+
+                <div class="contact-item">
+
+                    <strong>Address</strong>
+
+                    <span>
+                        7, Waziri Road, Off Airport Road,
+                        Maiduguri, Borno State
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>Phone</strong>
+
+                    <a href="tel:08109999911">
+                        08109999911
+                    </a>
+
+                    <br>
+
+                    <a href="tel:09160007548">
+                        09160007548
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>RC Number</strong>
+
+                    <span>
+                        9737862
+                    </span>
+
+                </div>
+
+
+                <a
+                    class="whatsapp"
+                    href="https://wa.me/2348109999911?text=Hello%20Muspha%20Construction%20%26%20Services%20Limited%2C%20I%20would%20like%20to%20make%20an%20inquiry."
+                    target="_blank">
+
+                    WhatsApp Us
+
+                </a>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <h3>Why Choose Muspha?</h3>
+
+                <div class="contact-item">
+
+                    <strong>Quality</strong>
+
+                    <span>
+                        We focus on quality workmanship
+                        and professional standards.
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>Reliability</strong>
+
+                    <span>
+                        We take our commitments and projects
+                        seriously.
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>Professionalism</strong>
+
+                    <span>
+                        We approach every project with
+                        planning, discipline and attention
+                        to detail.
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>Value</strong>
+
+                    <span>
+                        Our goal is to create practical,
+                        durable and valuable results.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        <img
+            src="./FC183645-30C3-4F46-B73E-56DA4FAF0CBD.png"
+            alt="Muspha Logo"
+        >
+
+    </div>
+
+    <p>
+        <span class="gold">
+            MUSPHA CONSTRUCTION & SERVICES LIMITED
+        </span>
+    </p>
+
+    <p>
+        Building Trust • Creating Value
+    </p>
+
+    <p>
+        7, Waziri Road, Off Airport Road,
+        Maiduguri, Borno State
+    </p>
+
+    <p>
+        08109999911 • 09160007548
+    </p>
+
+    <p>
+        RC: 9737862
+    </p>
+
+    <br>
+
+    <p>
+        © 2026 Muspha Construction & Services Limited.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<a href="#home" class="top-btn">
     ↑
-  </button>
+</a>
 
 
-  <!-- =======================================================
-       JAVASCRIPT
-       ======================================================= -->
+<script>
 
-  <script>
+function toggleMenu() {
 
-    /* ---------------------------------------------
-       MOBILE MENU
-       --------------------------------------------- */
+    const menu = document.getElementById("navLinks");
 
-    const menuButton = document.getElementById("menuButton");
-    const mobileMenu = document.getElementById("mobileMenu");
-    const menuIcon = document.getElementById("menuIcon");
+    menu.classList.toggle("active");
 
-    menuButton.addEventListener("click", function () {
+}
 
-      const isOpen = mobileMenu.classList.toggle("active");
+function closeMenu() {
 
-      menuButton.setAttribute(
-        "aria-expanded",
-        isOpen ? "true" : "false"
-      );
+    const menu = document.getElementById("navLinks");
 
-      menuIcon.textContent = isOpen ? "×" : "☰";
+    menu.classList.remove("active");
 
-    });
+}
 
-
-    /* ---------------------------------------------
-       CLOSE MOBILE MENU AFTER CLICK
-       --------------------------------------------- */
-
-    const mobileLinks =
-      mobileMenu.querySelectorAll("a");
-
-    mobileLinks.forEach(function(link) {
-
-      link.addEventListener("click", function() {
-
-        mobileMenu.classList.remove("active");
-
-        menuIcon.textContent = "☰";
-
-        menuButton.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-
-      });
-
-    });
-
-
-    /* ---------------------------------------------
-       BACK TO TOP
-       --------------------------------------------- */
-
-    const backTop =
-      document.getElementById("backTop");
-
-    window.addEventListener("scroll", function() {
-
-      if (window.scrollY > 500) {
-
-        backTop.classList.add("show");
-
-      } else {
-
-        backTop.classList.remove("show");
-
-      }
-
-    });
-
-
-    backTop.addEventListener("click", function() {
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-
-    });
-
-
-    /* ---------------------------------------------
-       CURRENT YEAR
-       --------------------------------------------- */
-
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-
-
-    /* ---------------------------------------------
-       CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
-       --------------------------------------------- */
-
-    document.addEventListener("click", function(event) {
-
-      if (
-        mobileMenu.classList.contains("active") &&
-        !mobileMenu.contains(event.target) &&
-        !menuButton.contains(event.target)
-      ) {
-
-        mobileMenu.classList.remove("active");
-
-        menuIcon.textContent = "☰";
-
-        menuButton.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-
-      }
-
-    });
-
-  </script>
+</script>
 
 </body>
 </html>
